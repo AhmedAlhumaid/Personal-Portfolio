@@ -411,13 +411,16 @@ h1 {
 }
 
 .btn.primary {
-  color: #0f172a;
-  background: linear-gradient(135deg, #fde68a, #fcd34d, #fbbf24, #f59e0b);
+  color: #ffffff;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1, #3b82f6);
   background-size: 200% 200%;
   animation: gradientShift 6s ease infinite;
   box-shadow:
-    0 20px 40px -20px rgba(251, 191, 36, 0.9),
-    0 0 0 1px rgba(251, 191, 36, 0.2) inset;
+    0 20px 40px -20px rgba(139, 92, 246, 0.8),
+    0 0 0 1px rgba(139, 92, 246, 0.3) inset,
+    0 0 30px rgba(139, 92, 246, 0.3);
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 .btn.primary::after {
@@ -426,7 +429,7 @@ h1 {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.3),
     transparent 50%,
     rgba(0, 0, 0, 0.1)
   );
@@ -437,8 +440,10 @@ h1 {
 .btn.primary:hover {
   transform: translateY(-3px) scale(1.02);
   box-shadow:
-    0 30px 60px -25px rgba(251, 191, 36, 1),
-    0 0 0 1px rgba(251, 191, 36, 0.3) inset;
+    0 30px 60px -25px rgba(139, 92, 246, 1),
+    0 0 0 1px rgba(139, 92, 246, 0.5) inset,
+    0 0 40px rgba(139, 92, 246, 0.5);
+  background: linear-gradient(135deg, #a78bfa, #818cf8, #60a5fa);
 }
 
 .btn.primary:hover::after {
@@ -446,28 +451,39 @@ h1 {
 }
 
 .btn.ghost {
-  color: #e2e8f0;
-  border-color: rgba(226, 232, 240, 0.5);
-  background: rgba(15, 23, 42, 0.2);
+  color: #e0e7ff;
+  border-color: rgba(139, 92, 246, 0.5);
+  background: rgba(139, 92, 246, 0.1);
   backdrop-filter: blur(10px);
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+  box-shadow:
+    0 0 20px rgba(139, 92, 246, 0.2),
+    0 0 0 1px rgba(139, 92, 246, 0.2) inset;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .btn.ghost::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.2),
+    rgba(59, 130, 246, 0.15)
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .btn.ghost:hover {
-  border-color: rgba(255, 255, 255, 0.8);
-  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(139, 92, 246, 0.8);
+  background: rgba(139, 92, 246, 0.2);
   color: #fff;
   transform: translateY(-3px);
-  box-shadow: 0 20px 45px -30px rgba(59, 130, 246, 0.8);
+  box-shadow:
+    0 20px 45px -30px rgba(139, 92, 246, 0.8),
+    0 0 30px rgba(139, 92, 246, 0.3),
+    0 0 0 1px rgba(139, 92, 246, 0.4) inset;
 }
 
 .btn.ghost:hover::after {
