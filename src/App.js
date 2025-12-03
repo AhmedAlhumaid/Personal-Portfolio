@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import './App.css';
 
 const contact = {
-  name: 'Winston Churchill',
+  name: 'Leo Messi',
   email: 'winston@gmail.com',
   phone: '+966505891400',
   location: 'Dhahran, Saudi Arabia',
@@ -108,7 +108,7 @@ function App() {
 
   return (
     <div className="page">
-      <header className="hero reveal">
+      <header className="hero">
         <div className="hero__content">
           <p className="eyebrow">Summer Training Candidate</p>
           <h1>{contact.name}</h1>
