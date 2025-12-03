@@ -82,7 +82,8 @@ const languages = [
 
 function App() {
   useEffect(() => {
-    const revealables = document.querySelectorAll('.reveal');
+    // Reveal animations for sections
+    const revealables = document.querySelectorAll('.reveal, .pop');
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -92,11 +93,17 @@ function App() {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
     );
 
     revealables.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+
+    // Smooth scroll behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   return (
