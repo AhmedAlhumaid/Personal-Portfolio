@@ -3,11 +3,11 @@ import './App.css';
 
 const contact = {
   name: 'Leo Messi',
-  email: 'winston@gmail.com',
-  phone: '+966505891400',
-  location: 'Dhahran, Saudi Arabia',
+  email: '8BallonDors@gmail.com',
+  phone: '+966200920112015',
+  location: 'Rosario, Argentina',
   objective:
-    'Computer Science student at KFUPM seeking a summer training position to contribute to innovative projects while gaining hands-on industry experience.',
+    'This portfolio aims to highlight my technical abilities, academic projects, and hands-on experience across software development, cloud technologies, and distributed systems.',
 };
 
 const education = {
@@ -110,7 +110,7 @@ function App() {
     <div className="page">
       <header className="hero">
         <div className="hero__content">
-          <p className="eyebrow">Summer Training Candidate</p>
+          <p className="eyebrow">My personal portfolio</p>
           <h1>{contact.name}</h1>
           <p className="hero__objective">{contact.objective}</p>
           <div className="hero__contact">
@@ -269,7 +269,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>Ready to contribute to impactful teams during Summer 2025.</p>
+        <p>Ready to be a functional member in our society!</p>
       </footer>
     </div>
   );
