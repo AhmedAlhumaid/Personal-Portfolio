@@ -139,6 +139,21 @@ function App() {
           </div>
         </div>
         <div className="hero__card">
+          <div className="hero__image">
+            <img
+              src="/messi-profile.jpg"
+              alt="Lionel Messi"
+              className="profile-img"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextElementSibling.style.display = 'flex';
+              }}
+            />
+            <div className="image-placeholder">
+              <span>🐐</span>
+              <p>Add messi-profile.jpg to /public folder</p>
+            </div>
+          </div>
           <p>Greatest of All Time • Argentina Captain</p>
           <div className="hero__stats">
             {career.stats.map((stat) => (
