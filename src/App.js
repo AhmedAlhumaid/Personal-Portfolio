@@ -2,82 +2,93 @@ import { useEffect } from 'react';
 import './App.css';
 
 const contact = {
-  name: 'Leo Messi',
+  name: 'Lionel Messi',
   email: '8BallonDors@gmail.com',
-  phone: '+966200920112015',
-  location: 'Rosario, Argentina',
+  phone: '+1 305 8XX XXXX',
+  location: 'Miami, Florida & Rosario, Argentina',
   objective:
-    'This portfolio aims to highlight my technical abilities, academic projects, and hands-on experience across software development, cloud technologies, and distributed systems.',
+    'World Cup champion and 8-time Ballon d\'Or winner. Widely regarded as one of the greatest footballers of all time, combining exceptional dribbling, vision, and goal-scoring ability.',
 };
 
-const education = {
-  institution: 'King Fahd University of Petroleum and Minerals',
-  program: 'B.S. Computer Science',
-  years: '2021 – 2026',
-  location: 'Dhahran, Saudi Arabia',
-  coreCoursework: [
-    'Object Oriented Programming',
-    'Data Structures & Algorithms',
-    'Principles of Software Engineering',
-    'Databases',
-    'Web Development & Engineering',
-    'Networks & Data Communication',
+const career = {
+  academy: 'FC Barcelona Youth Academy (La Masia)',
+  achievement: 'Professional Footballer & Captain',
+  years: '2000 – Present',
+  location: 'Barcelona, Paris & Miami',
+  highlights: [
+    'FIFA World Cup Winner (2022)',
+    '8× Ballon d\'Or Winner',
+    '4× UEFA Champions League Winner',
+    '10× La Liga Champion',
+    'All-time Top Scorer for Barcelona & Argentina',
+    'Copa América Winner (2021)',
   ],
   stats: [
-    { label: 'Major GPA', value: '3.95 / 4' },
-    { label: 'Cumulative GPA', value: '3.93 / 4' },
+    { label: 'Career Goals', value: '800+' },
+    { label: 'Career Assists', value: '350+' },
   ],
 };
 
 const skills = {
   technical: [
-    'Web Development (Frontend & Backend)',
-    'Mobile Apps (Frontend)',
-    'API Development',
-    'Database Design & Normalization',
-    'Technical Report Writing',
+    'Dribbling & Ball Control',
+    'Finishing & Goal Scoring',
+    'Playmaking & Vision',
+    'Free Kicks & Set Pieces',
+    'Left-footed Precision',
   ],
-  soft: ['Problem Solving', 'Communication & Teamwork', 'Time Management', 'Organization'],
+  mental: ['Leadership & Captaincy', 'Clutch Performance', 'Game Intelligence', 'Team Chemistry'],
 };
 
-const techStack = ['Java', 'JavaScript', 'HTML', 'CSS', 'MongoDB', 'Express.js', 'React', 'Node.js', 'Python', 'Flutter', 'Dart', 'SQL'];
+const clubs = ['Barcelona', 'PSG', 'Inter Miami', 'Argentina NT', 'Newell\'s Old Boys', 'La Masia'];
 
-const projects = [
+const careerHighlights = [
   {
-    title: 'Train-Booking System',
-    stack: 'MERN',
-    date: 'Dec 2024',
+    title: 'FIFA World Cup Victory',
+    achievement: 'Champion & Golden Ball',
+    date: 'Dec 2022',
     description:
-      'Web application to streamline ticket booking. Implemented JWT-based authentication, seat selection, and booking workflows.',
+      'Led Argentina to World Cup glory in Qatar, scoring 7 goals including a brace in the final. Won the Golden Ball as tournament\'s best player, cementing legacy as the greatest.',
   },
   {
-    title: 'Single Cycle & Pipelined Processor',
-    stack: 'Logisim',
-    date: 'May 2024',
+    title: 'Barcelona Golden Era',
+    achievement: '35 Trophies',
+    date: '2004-2021',
     description:
-      'Designed and simulated single-cycle and pipelined processors demonstrating mastery of architecture and pipeline optimization.',
+      'Spent 17 seasons with Barcelona, winning 10 La Liga titles, 4 Champions Leagues, and scoring 672 goals. Became the club\'s all-time leading scorer and assisted in hundreds more.',
   },
   {
-    title: 'Events & Facilities Reservation System',
-    stack: 'Java / JavaFX',
-    date: 'May 2024',
+    title: 'Eight Ballon d\'Or Awards',
+    achievement: 'Record Breaking',
+    date: '2009-2023',
     description:
-      'Desktop app enabling streamlined reservation management with intuitive UI and core scheduling capabilities.',
+      'Won a record 8 Ballon d\'Or awards (2009, 2010, 2011, 2012, 2015, 2019, 2021, 2023), more than any player in history. Consistently recognized as the world\'s best footballer.',
   },
 ];
 
-const credentials = {
-  certificates: ['Flutter & Dart - The Complete Guide (Maximilian Schwarzmüller)'],
-  awards: [
-    { title: 'Dean’s Honor List', org: 'Department of Computing & Mathematics', year: '2025' },
-    { title: 'Outstanding Performance in Physics (Twice)', org: 'KFUPM Physics Department', year: '2023' },
-    { title: 'Outstanding Performance in Mathematics', org: 'KFUPM Math Department', year: '2022' },
+const achievements = {
+  majorTrophies: [
+    'FIFA World Cup (2022)',
+    'Copa América (2021, 2024)',
+    'UEFA Champions League (4×)',
+    'La Liga (10×)',
+    'Copa del Rey (7×)',
+    'Ligue 1 (2×)',
+    'Leagues Cup (2023)',
+  ],
+  individualAwards: [
+    { title: '8× FIFA Ballon d\'Or', year: '2009-2023' },
+    { title: 'FIFA World Cup Golden Ball', year: '2022' },
+    { title: '6× European Golden Shoe', year: 'Various' },
+    { title: 'FIFA World Player of the Year', year: '2009' },
+    { title: 'Laureus World Sportsman of the Year', year: '2020, 2023' },
   ],
 };
 
 const languages = [
-  { name: 'Arabic', level: 'Native' },
-  { name: 'English', level: 'Professional – TOEFL PBT 607/677 (≈ IELTS 7-7.5)' },
+  { name: 'Spanish', level: 'Native' },
+  { name: 'Catalan', level: 'Fluent' },
+  { name: 'English', level: 'Conversational' },
 ];
 
 function App() {
@@ -110,7 +121,7 @@ function App() {
     <div className="page">
       <header className="hero">
         <div className="hero__content">
-          <p className="eyebrow">My personal portfolio</p>
+          <p className="eyebrow">World Cup Champion • 8× Ballon d'Or</p>
           <h1>{contact.name}</h1>
           <p className="hero__objective">{contact.objective}</p>
           <div className="hero__contact">
@@ -120,17 +131,17 @@ function App() {
           </div>
           <div className="hero__actions">
             <a className="btn primary" href={`mailto:${contact.email}`}>
-              Let’s Connect
+              Get In Touch
             </a>
-            <a className="btn ghost" href="#projects">
-              View Projects
+            <a className="btn ghost" href="#highlights">
+              View Achievements
             </a>
           </div>
         </div>
         <div className="hero__card">
-          <p>Computer Science Student · KFUPM</p>
+          <p>Greatest of All Time • Argentina Captain</p>
           <div className="hero__stats">
-            {education.stats.map((stat) => (
+            {career.stats.map((stat) => (
               <div key={stat.label}>
                 <span>{stat.label}</span>
                 <strong>{stat.value}</strong>
@@ -141,22 +152,22 @@ function App() {
       </header>
 
       <main>
-        <section className="section education reveal">
+        <section className="section career reveal">
           <div>
-            <h2>Education</h2>
-            <p className="section__subtitle">{education.program}</p>
+            <h2>Career Journey</h2>
+            <p className="section__subtitle">{career.achievement}</p>
           </div>
           <div className="education__details">
             <div>
-              <h3>{education.institution}</h3>
-              <p>{education.location}</p>
-              <p className="muted">{education.years}</p>
+              <h3>{career.academy}</h3>
+              <p>{career.location}</p>
+              <p className="muted">{career.years}</p>
             </div>
             <div>
-              <h4>Core Coursework</h4>
+              <h4>Major Achievements</h4>
               <ul>
-                {education.coreCoursework.map((course) => (
-                  <li key={course}>{course}</li>
+                {career.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
                 ))}
               </ul>
             </div>
@@ -165,12 +176,12 @@ function App() {
 
         <section className="section skills reveal">
           <div>
-            <h2>Skills</h2>
-            <p className="section__subtitle">Strong technical foundation backed by collaborative soft skills.</p>
+            <h2>Skills & Attributes</h2>
+            <p className="section__subtitle">Exceptional technical ability combined with unmatched football IQ.</p>
           </div>
           <div className="skills__grid">
             <div className="card">
-              <h3>Technical</h3>
+              <h3>Technical Skills</h3>
               <ul>
                 {skills.technical.map((skill) => (
                   <li key={skill}>{skill}</li>
@@ -178,37 +189,37 @@ function App() {
               </ul>
             </div>
             <div className="card">
-              <h3>Soft Skills</h3>
+              <h3>Mental Attributes</h3>
               <ul>
-                {skills.soft.map((skill) => (
+                {skills.mental.map((skill) => (
                   <li key={skill}>{skill}</li>
                 ))}
               </ul>
             </div>
           </div>
           <div className="stack">
-            {techStack.map((tech, index) => (
-              <span key={tech} style={{ animationDelay: `${index * 60}ms` }}>
-                {tech}
+            {clubs.map((club, index) => (
+              <span key={club} style={{ animationDelay: `${index * 60}ms` }}>
+                {club}
               </span>
             ))}
           </div>
         </section>
 
-        <section id="projects" className="section projects reveal">
+        <section id="highlights" className="section projects reveal">
           <div>
-            <h2>Highlighted Projects</h2>
-            <p className="section__subtitle">Select work across web, systems, and desktop development.</p>
+            <h2>Career Highlights</h2>
+            <p className="section__subtitle">Defining moments from an extraordinary football career.</p>
           </div>
           <div className="projects__grid">
-            {projects.map((project, index) => (
-              <article key={project.title} className="card pop" style={{ animationDelay: `${index * 120}ms` }}>
+            {careerHighlights.map((highlight, index) => (
+              <article key={highlight.title} className="card pop" style={{ animationDelay: `${index * 120}ms` }}>
                 <header>
-                  <p className="muted">{project.date}</p>
-                  <span className="tag">{project.stack}</span>
+                  <p className="muted">{highlight.date}</p>
+                  <span className="tag">{highlight.achievement}</span>
                 </header>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
+                <h3>{highlight.title}</h3>
+                <p>{highlight.description}</p>
               </article>
             ))}
           </div>
@@ -216,25 +227,24 @@ function App() {
 
         <section className="section credentials reveal">
           <div>
-            <h2>Credentials</h2>
+            <h2>Trophies & Awards</h2>
           </div>
           <div className="credentials__grid">
             <div className="card">
-              <h3>Certificates</h3>
+              <h3>Major Trophies</h3>
               <ul>
-                {credentials.certificates.map((cert) => (
-                  <li key={cert}>{cert}</li>
+                {achievements.majorTrophies.map((trophy) => (
+                  <li key={trophy}>{trophy}</li>
                 ))}
               </ul>
             </div>
             <div className="card">
-              <h3>Awards</h3>
+              <h3>Individual Awards</h3>
               <ul>
-                {credentials.awards.map((award) => (
+                {achievements.individualAwards.map((award) => (
                   <li key={award.title}>
                     <div>
                       <strong>{award.title}</strong>
-                      <p className="muted">{award.org}</p>
                     </div>
                     <span>{award.year}</span>
                   </li>
@@ -260,16 +270,16 @@ function App() {
 
         <section className="section references reveal">
           <div>
-            <h2>References</h2>
+            <h2>Legacy</h2>
           </div>
           <div className="card">
-            <p>Available upon request.</p>
+            <p>Widely regarded as the greatest footballer of all time. From the streets of Rosario to lifting the World Cup, Lionel Messi has inspired millions with his extraordinary talent, humility, and dedication to the beautiful game.</p>
           </div>
         </section>
       </main>
 
       <footer className="footer">
-        <p>Ready to be a functional member in our society!</p>
+        <p>🏆 World Cup Champion • 8× Ballon d'Or • The Greatest of All Time 🐐</p>
       </footer>
     </div>
   );
